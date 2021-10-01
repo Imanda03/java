@@ -1,0 +1,27 @@
+package practice;
+
+public class Construction {
+	
+	int age;
+	String name;
+	
+	public Construction() {
+		
+		age = 20;
+		name = "die";
+		
+	}
+	public String getNamee() { return name;}
+	public void setNamee(String n) { name = n;}
+	public int getAgee() { return age;}
+	public void setAgee() { int age;}
+
+	public static void main(String[] args) {
+		
+		Construction cns = new Construction();
+		
+		System.out.println(cns.getNamee);
+
+	}
+
+}

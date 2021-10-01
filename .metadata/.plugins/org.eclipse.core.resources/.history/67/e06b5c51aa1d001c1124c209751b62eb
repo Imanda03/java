@@ -1,0 +1,14 @@
+package practice;
+
+public class DecryptAndEncryptChar {
+
+	public static void main(String[] args) {
+		char ch = 'B';
+		int grade = (char) (ch + 8);
+		System.out.println(grade);
+		
+		
+
+	}
+
+}

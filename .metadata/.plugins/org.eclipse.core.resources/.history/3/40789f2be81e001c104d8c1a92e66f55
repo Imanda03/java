@@ -1,0 +1,23 @@
+package practice;
+
+public class Pyramid {
+		
+		public void pyramid (int n) {
+			int i, j;
+			for(i=1; i<=n; i++) {
+				for(j=1; j<i; j++) {
+					System.out.println("*");
+				}
+				
+			}
+		}
+		
+		
+	
+	public static void main(String[] args) {
+		
+			Pyramid py = new Pyramid();
+			py.pyramid(5);
+	}
+
+}
