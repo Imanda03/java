@@ -6,6 +6,7 @@ public class OverrideExample {
 	}
 }
 	class Exmple extends OverrideExample{
+		@Override
 		void zooFirst() {
 			System.out.println("I am animal of second zoo");
 		}
