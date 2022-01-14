@@ -4,40 +4,60 @@ import java.util.Scanner;
 
 
 	class Gamee{
-			public int number;
-			public int inputnumber;
-			public int guess;
-			public int getGuess() {
-				return guess;
-			}
-			public void setGuess(int guess) {
-				
-			}
+		public int number;
+		public int noOfGuesses;
+		public int inputNumber;
+		
+		public int getNoOfGuesses() {
+			return noOfGuesses;
+		}
+		
+		public void setNoOfGuesses(int noOfGuesses) {
+			this.noOfGuesses = noOfGuesses;
+		}
+		
+		
+		 Gamee() {
+			Random ran = new Random();
+			this.number = ran.nextInt(100);
+		}
+		void takeUserInput() {
+			System.out.println("Guess the number");
+				Scanner sc = new Scanner(System.in);
+				inputNumber = sc.nextInt();
 			
-				void Game() {
-					Random ran = new Random();
-					this.number = ran.nextInt(100);
-				}
-				void takeInput() {
-					Scanner sc = new Scanner(System.in);
-					inputnumber = sc.nextInt();
-					
-				}
-				boolean iscorrectnumber(int num) {
-					if(num == number) {
-						return true;
-					}
-					return false;
-				}
-				
+		}
+		boolean isCoorectNumber() {
+			if(inputNumber==number) {
+				System.out.println("You are correct. You guess it");
+				return true;
+			}
+			else if(inputNumber<number){
+				System.out.println("Numer is less...");
+			}
+				else if(inputNumber>number){
+					System.out.println("Numer is more...");
+			} 
+			return false;
+		}
+		
+
 }
 
 	public class Game {
 	
 	public static void main(String[] args) {
+		Gamee g = new Gamee();
+		boolean b = false;
+		while(!b) {
+		g.takeUserInput();
+		b = g.isCoorectNumber();
+		System.out.println(b);
+		}
 		
-		Game g = new Game();
-		g.takeInput();
 	}
 
-}
+		
+	}
+
+
